@@ -6,7 +6,7 @@ namespace TaskPaymentProcesses
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PaymentMethodMenu menu = new PaymentMethodMenu();   
         }
     }
 }
