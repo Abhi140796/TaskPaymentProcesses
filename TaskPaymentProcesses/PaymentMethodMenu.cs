@@ -8,19 +8,23 @@ namespace TaskPaymentProcesses
     
     public class PaymentMethodMenu
     {
+        private string Title = "******************************\tSelect Payment Method\t**************************************";
         /// <summary>
         /// paymentMenu contains string which is content of payment menu
         /// </summary>
         private string paymentMenu = "[1]. Credit Card" +
                                      "\n[2]. Debit Card" +
-                                     "\n[3]. Netbanking\n[4]. UPI Payments";
+                                     "\n[3]. Netbanking" +
+                                     "\n[4]. UPI Payments";
+
 
         /// <summary>
         /// it consist method to print menu when instance of the class created.
         /// </summary>
         public PaymentMethodMenu()
         {
-            System.Console.WriteLine(paymentMenu);
+            Console.WriteLine(Title,"\n");
+            System.Console.WriteLine(paymentMenu,"\n");
             ChoosePaymentMethod();
         }
 
@@ -34,7 +38,11 @@ namespace TaskPaymentProcesses
 
             Console.WriteLine("Choose a payment method: ");
             int option = Convert.ToInt32(Console.ReadLine());
-
+            if (option > 4)
+            {
+                Console.WriteLine("Invalid Request!!");
+                ChoosePaymentMethod();
+            }
             switch (option)
             {
                 case 1:
