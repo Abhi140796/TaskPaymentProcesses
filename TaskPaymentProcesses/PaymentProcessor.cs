@@ -19,39 +19,39 @@ namespace TaskPaymentProcesses
         private readonly IPaymentProcess paymentProcess;
 
         /// <summary>
-        /// It is the constructor of the class and we have inject the IPaymentProcess here
-        /// <para>as a reference</para>
+        /// Interface reference is define in constructor so that other methods can have access to property of Interface
         /// </summary>
         /// <param name="paymentProcess">reference variable of type IPaymentProcess</param>
-       
-        #region Constructor
         public PaymentProcessor(IPaymentProcess paymentProcess)
         {
             this.paymentProcess = paymentProcess;
         }
-        #endregion
 
         #region Payment Methods
         public void CreditCard()
         {
+            //print payment completion message for Credit card transaction
             paymentProcess.PaymentMessage("Credit card Payment processed successfully!!");
         }
 
         
         public void DebitCard()
         {
+            //print payment completion message for Debit Card transaction
             paymentProcess.PaymentMessage("Debit card Payment processed successfully!!");
         }
 
         
         public void Netbanking()
         {
+            //print payment completion message for Netbanking transaction
             paymentProcess.PaymentMessage("Netbanking Payment processed successfully!!");
         }
 
         
         public void UPIPayments()
         {
+            //print payment completion message for UPI transaction
             paymentProcess.PaymentMessage("UPI Payment processed successfully!!");
         }
         #endregion

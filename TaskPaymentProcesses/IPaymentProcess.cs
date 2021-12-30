@@ -7,6 +7,7 @@
 
     public interface IPaymentProcess 
     {
+        //used to print message after payment completion
         void PaymentMessage(string paymentMessage);
     }
 }

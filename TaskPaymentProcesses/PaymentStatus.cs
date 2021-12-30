@@ -9,8 +9,7 @@
         /// <summary>
         /// Defining method of Interface IPaymentProcess
         /// </summary>
-        /// <param name="paymentMessage">contains string value provided in payment methods</param>
-        
+        /// <param name="paymentMessage">string to print</param>
         public void PaymentMessage(string paymentMessage)
         {
             System.Console.WriteLine(paymentMessage);
