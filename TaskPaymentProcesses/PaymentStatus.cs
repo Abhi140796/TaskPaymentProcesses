@@ -1,16 +1,16 @@
 ﻿namespace TaskPaymentProcesses
 {
     /// <summary>
-    /// Class PaymentStatus inherit interface IPaymentProcess
+    /// Class PaymentStatus inherit interface IPaymentStatus
     /// </summary>
     
-    public class PaymentStatus : IPaymentProcess
+    public class PaymentStatus : IPaymentStatus
     {
         /// <summary>
-        /// Defining method of Interface IPaymentProcess
+        /// Defining method of Interface IPaymentStatus
         /// </summary>
         /// <param name="paymentMessage">print the payment related message</param>
-        public void PaymentMessage(string paymentMessage)
+        public void PaymentConfirmationMessage(string paymentMessage)
         {
             System.Console.WriteLine(paymentMessage);
         }

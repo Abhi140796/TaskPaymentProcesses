@@ -13,46 +13,46 @@ namespace TaskPaymentProcesses
     public class PaymentProcessor
     {
         /// <summary>
-        /// paymentProcess is reference variable for IPaymentProcess interface
+        /// paymentStatus is reference variable for IPaymentStatus interface
         /// </summary>
         
-        private readonly IPaymentProcess paymentProcess;
+        private readonly IPaymentStatus paymentStatus;
 
         /// <summary>
         /// Interface reference is define in constructor so that other methods can have access to property of Interface
         /// </summary>
-        /// <param name="paymentProcess">reference variable of type IPaymentProcess</param>
-        public PaymentProcessor(IPaymentProcess paymentProcess)
+        /// <param name="paymentProcess">reference variable of type IPaymentStatus</param>
+        public PaymentProcessor(IPaymentStatus paymentProcessStatus)
         {
-            this.paymentProcess = paymentProcess;
+            this.paymentStatus = paymentProcessStatus;
         }
 
         #region Payment Methods
         public void CreditCard()
         {
             //print payment completion message for Credit card transaction
-            paymentProcess.PaymentMessage("Credit card Payment processed successfully!!");
+            paymentStatus.PaymentConfirmationMessage("Credit card Payment processed successfully!!");
         }
 
         
         public void DebitCard()
         {
             //print payment completion message for Debit Card transaction
-            paymentProcess.PaymentMessage("Debit card Payment processed successfully!!");
+            paymentStatus.PaymentConfirmationMessage("Debit card Payment processed successfully!!");
         }
 
         
         public void Netbanking()
         {
             //print payment completion message for Netbanking transaction
-            paymentProcess.PaymentMessage("Netbanking Payment processed successfully!!");
+            paymentStatus.PaymentConfirmationMessage("Netbanking Payment processed successfully!!");
         }
 
         
         public void UPIPayments()
         {
             //print payment completion message for UPI transaction
-            paymentProcess.PaymentMessage("UPI Payment processed successfully!!");
+            paymentStatus.PaymentConfirmationMessage("UPI Payment processed successfully!!");
         }
         #endregion
     }

@@ -12,10 +12,10 @@ namespace TaskPaymentProcesses
         /// <summary>
         /// paymentMenu contains string which is content of payment menu
         /// </summary>
-        private string paymentMenu = "[1]. Credit Card" +
+        private string paymentMenu = "\n[1]. Credit Card" +
                                      "\n[2]. Debit Card" +
                                      "\n[3]. Netbanking" +
-                                     "\n[4]. UPI Payments";
+                                     "\n[4]. UPI Payments\n";
 
 
         /// <summary>
@@ -23,8 +23,8 @@ namespace TaskPaymentProcesses
         /// </summary>
         public PaymentMethodMenu()
         {
-            Console.WriteLine(Title,"\n");
-            System.Console.WriteLine(paymentMenu,"\n");
+            Console.WriteLine(Title);
+            System.Console.WriteLine(paymentMenu);
             ChoosePaymentMethod();
         }
 
@@ -33,7 +33,7 @@ namespace TaskPaymentProcesses
         {
             //reference variable is created to access PaymentProcessor class
             //PaymentProcessor constructor recquire interface as parameter so
-            //PaymentStatus constructor is declared as it inherit the IPaymentProcess interface.
+            //PaymentStatus constructor is declared as it inherit the IPaymentStatus interface.
             var paymentMethods = new PaymentProcessor(new PaymentStatus());
 
             Console.WriteLine("Choose a payment method: ");
