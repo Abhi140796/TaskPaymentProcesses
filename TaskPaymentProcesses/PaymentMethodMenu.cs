@@ -11,10 +11,12 @@ namespace TaskPaymentProcesses
         /// <summary>
         /// paymentMenu contains string which is content of payment menu
         /// </summary>
-        
+
+        #region Variables
         private string paymentMenu = "[1]. Credit Card" +
                                      "\n[2]. Debit Card" +
                                      "\n[3]. Netbanking\n[4]. UPI Payments";
+        #endregion
 
         #region Constructor
         public PaymentMethodMenu()

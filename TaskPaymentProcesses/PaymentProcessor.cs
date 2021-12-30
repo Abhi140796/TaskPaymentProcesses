@@ -12,11 +12,14 @@ namespace TaskPaymentProcesses
     
     public class PaymentProcessor
     {
-
+        /// <summary>
+        /// paymentProcess is reference variable for IPaymentProcess interface
+        /// </summary>
+        
         private readonly IPaymentProcess paymentProcess;
 
         /// <summary>
-        /// it is the constructor of the class and we have inject the IPaymentProcess here
+        /// It is the constructor of the class and we have inject the IPaymentProcess here
         /// <para>as a reference</para>
         /// </summary>
         /// <param name="paymentProcess">reference variable of type IPaymentProcess</param>
@@ -28,7 +31,7 @@ namespace TaskPaymentProcesses
         }
         #endregion
 
-        #region Payment Method
+        #region Payment Methods
         public void CreditCard()
         {
             paymentProcess.PaymentMessage("Credit card Payment processed successfully!!");
